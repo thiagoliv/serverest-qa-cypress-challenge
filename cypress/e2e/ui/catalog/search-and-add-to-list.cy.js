@@ -28,7 +28,7 @@ describe('UI - Cliente pesquisa e adiciona produto na lista', () => {
         }
 
         return cy.wrap([...userIds].reverse()).each((userId) => {
-          UsersClient.delete(userId, { failOnStatusCode: false });
+          return UsersClient.delete(userId, { failOnStatusCode: false });
         });
       })
       .then(() => {
