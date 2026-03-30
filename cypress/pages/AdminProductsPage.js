@@ -33,6 +33,10 @@ class AdminProductsPage {
       );
 
       expect(found, 'Ao menos um item administrativo deve estar visível').to.exist;
+
+      if (found) {
+        cy.getByTestId(found).should('be.visible');
+      }
     });
   }
 
